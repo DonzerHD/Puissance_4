@@ -26,7 +26,7 @@ def joueurClique(bouton):
 
 def verification():
     #ligne
-      for i in range(6):
+    for i in range(6):
         c = 0
         adjacent = 1
         couleur_precedente = ""
@@ -43,7 +43,24 @@ def verification():
                 messagebox.showinfo("Gagné", "Le joueur avec la couleur " + couleur + " a gagné!")
                 exit()
             couleur_precedente = couleur_actuelle
-        #colonne
+    #colonne
+    for i in range(7):
+        c = 0
+        adjacent = 1
+        couleur_precedente = ""
+        for j in range(6):
+            bouton = fenetre.grid_slaves(row=j,column=i)
+            couleur_actuelle = bouton[0].cget("bg")
+            if couleur_actuelle == couleur:
+                c = c + 1
+                if couleur_actuelle == couleur_precedente:
+                    adjacent += 1
+                else:
+                    adjacent = 1
+            if adjacent >= 4:
+                messagebox.showinfo("Gagné", "Le joueur avec la couleur " + couleur + " a gagné!")
+                exit()
+            couleur_precedente = couleur_actuelle
                 
             
 def egalite():

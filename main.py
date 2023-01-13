@@ -61,7 +61,8 @@ def verification():
                 messagebox.showinfo("Gagné", "Le joueur avec la couleur " + couleur + " a gagné!")
                 exit()
             couleur_precedente = couleur_actuelle
-                
+      #diagonale
+ 
             
 def egalite():
     pass

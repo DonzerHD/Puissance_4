@@ -5,7 +5,6 @@ fenetre = tk.Tk()
 fenetre.resizable(False,False)
 fenetre.title("Puissance 4")
 
-
 couleur = "red"
 
 def joueurClique(bouton):

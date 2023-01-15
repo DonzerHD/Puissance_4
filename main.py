@@ -22,6 +22,7 @@ def joueurClique(bouton):
     else:
         messagebox.showinfo("Case vide" , "La case n'est pas vide.")
     
+    
 
 def verification():
     #ligne
